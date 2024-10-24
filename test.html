@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h1>web播放器开发</h1>
+        <div id="myplayer"></div>
+        <p class="read-the-docs">
+          Click on the Vite and TypeScript logos to learn more
+        </p>
+      </div>
+    </div>
+    
+    <script type="module"> 
+      import { sxaiPlayer } from '/dist/cxaiPlayer.js';
+      const player = new sxaiPlayer("myplayer", {
+        url: "https://artplayer.org/assets/sample/video.mp4",
+        isLive: false
+      })
+
+      player.initPlayer()
+
+      player.play()
+    </script>
+  </body>
+</html>
