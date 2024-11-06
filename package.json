@@ -1,32 +1,28 @@
 {
-  "name": "cxaiplayer",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "files": [
-    "dist",
-    "index.d.ts"
-  ],
-  "main": "./dist/player.umd.cjs",
-  "module": "./dist/player.js",
-  "types": "./index.d.ts",
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./dist/player.js",
-    "require": "./dist/player.umd.cjs"
-  },
+  "name": "sxai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build"
+    "dev:main": "turbo run dev --filter sxaiplayer",
+    "build:all": "turbo run build",
+    "build:main": "turbo run build --filter sxaiplayer",
+    "build:flv": "turbo run build --filter sxaiplayer-flv",
+    "lint": "tsc"
   },
+  "keywords": ["player"],
+  "author": "rhs",
+  "private": true,
+  "license": "ISC",
+  "packageManager": "pnpm@9.12.1",
   "devDependencies": {
-    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
-    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@types/delegates": "^1.0.3",
     "@types/node": "^22.7.8",
     "typescript": "~5.6.3",
     "vite": "^5.4.9"
   },
   "dependencies": {
+    "delegate": "^3.2.0",
     "eventemitter3": "^5.0.1"
   }
 }

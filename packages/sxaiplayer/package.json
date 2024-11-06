@@ -1,0 +1,23 @@
+{
+  "name": "sxaiplayer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/sxaiplayer.umd.cjs",
+  "module": "./dist/sxaiplayer.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/sxaiplayer.js",
+    "require": "./dist/sxaiplayer.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "tsc"
+  }
+}
